@@ -1,0 +1,26 @@
+using System;
+
+namespace LicaoArvore
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Digite a expressão aritmética: ");
+            string expressao = Console.ReadLine();
+
+            char[] operadores = { '+', '-', '*', '/' };
+            int contador = 0;
+
+            foreach (char caractere in expressao)
+            {
+                if (Array.IndexOf(operadores, caractere) != -1)
+                {
+                    contador++;
+                }
+            }
+
+            Console.WriteLine($"A expressão possui {contador} níveis.");
+        }
+    }
+}
